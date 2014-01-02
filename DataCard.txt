@@ -1,0 +1,36 @@
+#This is the data card for the input of M2M3 analysis and TopMassFitter 
+# Auther : SCKao - UMN
+#
+
+# root files directory
+RootFiles = rootfiles/
+
+# Folder to store results
+Path = Histo_3/
+
+# plot type : png / gif / eps / jpg / pdf 
+PlotType = png
+
+# Histogram files ; TestGen : analysis results , Output : StatsTool input
+HFileName = histo_3
+
+######################################
+# Module 1: Run     2: Drawer   
+######################################
+Module = 1
+
+# MC = 0 , Data = 1
+IsData = 1
+# Files , '+' is the flag for TChain,  
+
+TheData = ( data+ )
+dataChain = ( cosmics_c, cosmics_d )
+
+# -1 : all of events
+ProcessEvents = -1
+SkipEvents = 0
+
+#       xtalE , csc_dPhi, min_swissX, max_swissX, dtdEta, dtdPhi 
+Cuts = ( 5. ,     0.05 ,      0.01 ,      0.9 ,    0.1 ,   0.1 ) 
+
+
